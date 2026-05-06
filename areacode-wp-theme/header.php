@@ -14,6 +14,7 @@ if (!defined('ABSPATH')) {
 <?php wp_body_open(); ?>
 
 <header class="site-header" id="topo">
+    <?php $wa_url = esc_url(areacode_theme_whatsapp_url()); ?>
     <div class="container nav-wrap">
         <a href="#hero" class="logo-link" aria-label="Area Code">
             <?php echo areacode_theme_logo_html('logo'); ?>
@@ -26,19 +27,19 @@ if (!defined('ABSPATH')) {
         </button>
 
         <nav class="desktop-nav">
-            <a href="#hero">Início</a>
-            <a href="#produtos">Produtos</a>
-            <a href="#processo">Como Trabalhamos</a>
-            <a href="#contato">Contato</a>
-            <a href="https://wa.me/+5531992940120" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Fale Conosco</a>
+            <a href="#hero"><?php echo esc_html(areacode_theme_text('nav_inicio')); ?></a>
+            <a href="#produtos"><?php echo esc_html(areacode_theme_text('nav_produtos')); ?></a>
+            <a href="#processo"><?php echo esc_html(areacode_theme_text('nav_processo')); ?></a>
+            <a href="#contato"><?php echo esc_html(areacode_theme_text('nav_contato')); ?></a>
+            <a href="<?php echo $wa_url; ?>" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><?php echo esc_html(areacode_theme_text('nav_cta')); ?></a>
         </nav>
     </div>
 
     <nav id="mobile-menu" class="mobile-nav" aria-hidden="true">
-        <a href="#hero">Início</a>
-        <a href="#produtos">Produtos</a>
-        <a href="#processo">Como Trabalhamos</a>
-        <a href="#contato">Contato</a>
-        <a href="https://wa.me/+5531992940120" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Fale Conosco</a>
+        <a href="#hero"><?php echo esc_html(areacode_theme_text('nav_inicio')); ?></a>
+        <a href="#produtos"><?php echo esc_html(areacode_theme_text('nav_produtos')); ?></a>
+        <a href="#processo"><?php echo esc_html(areacode_theme_text('nav_processo')); ?></a>
+        <a href="#contato"><?php echo esc_html(areacode_theme_text('nav_contato')); ?></a>
+        <a href="<?php echo $wa_url; ?>" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm"><?php echo esc_html(areacode_theme_text('nav_cta')); ?></a>
     </nav>
 </header>
